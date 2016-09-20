@@ -1,14 +1,12 @@
 #include <iostream>
 #include <stdlib.h>
 using namespace std;
-
 int main(){
 int total=0,min=0,k=0,temp=0,score=0;
 cin>>total;
 cin>>min;
 k=0;
 int *student_list  = (int *)malloc(total*sizeof(int));
-
 while(k<total){
   cin>>student_list[k++];
 }
