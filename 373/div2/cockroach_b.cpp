@@ -17,13 +17,12 @@ int main(){
 
     }
     else{
-      //function on all elements other than 0
       if(array[i+1]==array[i]&&array[i+1]!=array[i+2]&&i<count){
-
         temp = array[i+2];
         array[i+2]=array[i+2];
         array[i+1]=temp;
         key++;
+
       }
       else if(array[i]==array[i-1]&&array[i]==array[i+1]){
         if(array[i]=='b'){
@@ -33,13 +32,13 @@ int main(){
           array[i]=='b';
         }
         key++;
+
       }
     }
- while(m<count){
-    cout<<array[m];
-    m++;
-  }
-  cout<<i<<"\n";
+
+cout<<array<<endl;
+
+
 i++;
   }
   cout<<key;
