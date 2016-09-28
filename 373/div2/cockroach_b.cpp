@@ -1,46 +1,51 @@
 #include <iostream>
-
 using namespace std;
+int max(int a,int b){
+if(a<b){
+return b;
+}
+else{
+return a;
+}
+}
+
+int min(int a,int b){
+if(a>b){
+return b;
+}
+else{
+return a;
+}
+}
+
 int main(){
   int count,key=0;
   cin>>count;
   char *array = (char *)malloc(sizeof(char)*count);
-  int i=0,temp,m;
+  int i=0,a1=0,a2=0,b1=0,b2=0;
   while(i<count){
     cin>>array[i];
     i++;
   }
- i=0;
-  while(i<count){
-  m=0;
-    if(i==0){
 
+  for(i=0;i<count;i+=2){
+    if(array[i]=='r'){
+    a1++;
     }
     else{
-      if(array[i+1]==array[i]&&array[i+1]!=array[i+2]&&i<count){
-        temp = array[i+2];
-        array[i+2]=array[i+2];
-        array[i+1]=temp;
-        key++;
-
-      }
-      else if(array[i]==array[i-1]&&array[i]==array[i+1]){
-        if(array[i]=='b'){
-          array[i]=='r';
-        }
-        else{
-          array[i]=='b';
-        }
-        key++;
-
-      }
+    a2++;
     }
-
-cout<<array<<endl;
-
-
-i++;
   }
-  cout<<key;
-  return 0;
+  for(i=1;i<count;i+=2){
+    if(array[i]=='r'){
+    b1++;
+    }
+    else{
+    b2++;
+    }
+  }
+
+    cout<<max(min(a1,b1),min(a2,b2));
+
+return 0;
 }
