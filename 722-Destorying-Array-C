@@ -1,0 +1,58 @@
+#include<iostream>
+#include<stdlib.h>
+
+using namespace std;
+
+int main(){
+int count,current,check=0,max=0,sum=0;
+cin>>count;
+int *array = (int *)malloc(sizeof(int)*count);
+int *pos = (int *)malloc(sizeof(int)*count);
+int i =0,j;
+while(i<count){
+cin>>array[i];
+i++;
+}
+i=0;
+while(i<count){
+cin>>pos[i];
+i++;
+}
+
+int k=0,z;
+
+while(k<count){
+array[pos[k]-1] = -1;
+i=0
+
+
+
+    z=0;
+    max=0;
+sum=0;
+current=0;
+    while(z<count+1){
+
+    if(array[z]==-1){
+    if(max<sum){
+    max=sum;
+    sum=0;
+    }
+    }
+    else{
+    sum +=array[z];
+    }
+    z++;
+    current++;
+    }
+    if(sum>max){
+    max=sum;
+    }
+
+
+cout<<max<<endl;
+k++;
+
+}
+	return 0;
+}
