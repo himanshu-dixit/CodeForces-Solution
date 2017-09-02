@@ -23,10 +23,7 @@ int k=0,z;
 
 while(k<count){
 array[pos[k]-1] = -1;
-i=0
-
-
-
+i=0;
     z=0;
     max=0;
 sum=0;
